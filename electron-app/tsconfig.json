@@ -18,11 +18,11 @@
   },
   "include": [
     "main/**/*",
-    "preload/**/*",
-    "renderer/**/*"
+    "preload/**/*"
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "renderer"
   ]
 }
