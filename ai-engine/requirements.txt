@@ -1,0 +1,67 @@
+# Core Dependencies
+fastapi==0.109.0
+uvicorn[standard]==0.25.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+python-multipart==0.0.6
+
+# Audio Analysis
+librosa==0.10.1
+aubio==0.4.9
+sounddevice==0.4.6
+soundfile==0.12.1
+numpy==1.24.3
+scipy==1.11.4
+
+# Video Processing
+opencv-python==4.9.0.80
+opencv-contrib-python==4.9.0.80
+moviepy==1.0.3
+yt-dlp==2023.12.30
+
+# Machine Learning / AI
+torch==2.1.2
+torchvision==0.16.2
+transformers==4.36.2
+sentence-transformers==2.2.2
+pillow==10.1.0
+
+# LLM / Agent Framework
+langchain==0.1.0
+langchain-openai==0.0.2
+langchain-anthropic==0.0.1
+openai==1.6.1
+anthropic==0.8.0
+
+# Vector Database
+chromadb==0.4.22
+
+# Music Analysis
+madmom==0.16.1
+essentia==2.1b6.dev1110
+
+# MIDI Support
+python-rtmidi==1.5.8
+mido==1.3.2
+
+# OSC Protocol
+python-osc==1.8.3
+
+# Utilities
+requests==2.31.0
+aiohttp==3.9.1
+websockets==12.0
+pyyaml==6.0.1
+python-dotenv==1.0.0
+colorama==0.4.6
+tqdm==4.66.1
+
+# Data Processing
+pandas==2.1.4
+matplotlib==3.8.2
+
+# Development
+pytest==7.4.3
+black==23.12.1
+flake8==7.0.0
+mypy==1.7.1

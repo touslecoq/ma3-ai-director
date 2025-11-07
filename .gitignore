@@ -1,0 +1,99 @@
+# Dependencies
+node_modules/
+*/node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+.nyc_output/
+
+# Production builds
+dist/
+build/
+out/
+*.dmg
+*.exe
+*.zip
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+ai-engine/.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+logs/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.egg-info/
+.eggs/
+*.egg
+
+# AI/ML
+*.pt
+*.pth
+*.onnx
+*.h5
+*.keras
+models/checkpoints/
+data/cache/
+
+# Vector Database
+chroma_db/
+*.vectordb
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+.cache/
+.temp/
+*.pid
+*.seed
+*.pid.lock
+
+# Media files (too large for git)
+uploads/
+videos/
+audio/
+*.mp4
+*.avi
+*.mov
+*.mp3
+*.wav
+*.flac

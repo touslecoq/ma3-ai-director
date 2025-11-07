@@ -1,0 +1,49 @@
+{
+  "name": "grandma3-ai-director",
+  "version": "0.1.0",
+  "description": "AI-powered lighting director for GrandMA3 with video analysis, natural language control, and adaptive tempo tracking",
+  "main": "electron-app/main/index.js",
+  "author": "Richard Palcock",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd electron-app && npm install && cd ../ai-engine && pip install -r requirements.txt",
+    "dev": "concurrently \"npm run dev:electron\" \"npm run dev:python\"",
+    "dev:electron": "cd electron-app && npm run dev",
+    "dev:python": "cd ai-engine && python main.py",
+    "build": "npm run build:electron && npm run build:python",
+    "build:electron": "cd electron-app && npm run build",
+    "build:python": "cd ai-engine && pyinstaller --onefile main.py",
+    "package": "npm run build && electron-builder",
+    "package:mac": "npm run build && electron-builder --mac",
+    "package:win": "npm run build && electron-builder --win"
+  },
+  "build": {
+    "appId": "com.grandma3.ai-director",
+    "productName": "GrandMA3 AI Director",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "files": [
+      "electron-app/**/*",
+      "ai-engine/**/*",
+      "!ai-engine/**/__pycache__",
+      "!ai-engine/**/*.pyc"
+    ],
+    "mac": {
+      "target": ["dmg", "zip"],
+      "category": "public.app-category.music",
+      "icon": "build/icon.icns"
+    },
+    "win": {
+      "target": ["nsis", "portable"],
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}
